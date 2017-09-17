@@ -1,16 +1,353 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Jiaqiang Liao"><title>纵向数据分析方法在公共卫生研究中应用 | Biostat-自留地</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">纵向数据分析方法在公共卫生研究中应用</h1><a id="logo" href="/.">Biostat-自留地</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">纵向数据分析方法在公共卫生研究中应用</h1><div class="post-meta"><a href="/2016/11/22/newbiostat/#comments" class="comment-count"><a id="uyan_count_unit" href="/2016/11/22/newbiostat/"></a>Gästebuch</a><p><span class="date">Nov 22, 2016</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>Schlägt</i></i></span></p></div><div class="post-content"><p>纵向数据即我们通常所说的重复测量数据，指观察对象的研究效应不仅包括研究结局，<br>还包括出现结局变量的时间。当研究对象的研究结局在各个测量点之间的研究效应不独立时，<br>协方差结构将会相对复杂，因此需要在统计分析时，考虑复杂协方差结构，由此形成了一系列纵向数据分析的统计分析方法。</p>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>纵向数据分析方法在公共卫生研究中应用 | Biostat-自留地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="纵向数据即我们通常所说的重复测量数据，指观察对象的研究效应不仅包括研究结局，还包括出现结局变量的时间。当研究对象的研究结局在各个测量点之间的研究效应不独立时，协方差结构将会相对复杂，因此需要在统计分析时，考虑复杂协方差结构，由此形成了一系列纵向数据分析的统计分析方法。 根据资料类型的不同，纵向数据分析方法也各不相同。对定量结局变量，纵向数据分析方法主要包括重复测量方差分析，截断回归模型，中断时间序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="纵向数据分析方法在公共卫生研究中应用">
+<meta property="og:url" content="http://yoursite.com/2016/11/22/newbiostat/index.html">
+<meta property="og:site_name" content="Biostat-自留地">
+<meta property="og:description" content="纵向数据即我们通常所说的重复测量数据，指观察对象的研究效应不仅包括研究结局，还包括出现结局变量的时间。当研究对象的研究结局在各个测量点之间的研究效应不独立时，协方差结构将会相对复杂，因此需要在统计分析时，考虑复杂协方差结构，由此形成了一系列纵向数据分析的统计分析方法。 根据资料类型的不同，纵向数据分析方法也各不相同。对定量结局变量，纵向数据分析方法主要包括重复测量方差分析，截断回归模型，中断时间序">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-11-22T16:02:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="纵向数据分析方法在公共卫生研究中应用">
+<meta name="twitter:description" content="纵向数据即我们通常所说的重复测量数据，指观察对象的研究效应不仅包括研究结局，还包括出现结局变量的时间。当研究对象的研究结局在各个测量点之间的研究效应不独立时，协方差结构将会相对复杂，因此需要在统计分析时，考虑复杂协方差结构，由此形成了一系列纵向数据分析的统计分析方法。 根据资料类型的不同，纵向数据分析方法也各不相同。对定量结局变量，纵向数据分析方法主要包括重复测量方差分析，截断回归模型，中断时间序">
+  
+    <link rel="alternative" href="/atom.xml" title="Biostat-自留地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+</head>
+<body>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Biostat-自留地</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="yoursite.com">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="outer">
+      <section id="main"><article id="post-newbiostat" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/22/newbiostat/" class="article-date">
+  <time datetime="2016-11-22T15:51:30.000Z" itemprop="datePublished">2016-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      纵向数据分析方法在公共卫生研究中应用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>纵向数据即我们通常所说的重复测量数据，指观察对象的研究效应不仅包括研究结局，<br>还包括出现结局变量的时间。当研究对象的研究结局在各个测量点之间的研究效应不独立时，<br>协方差结构将会相对复杂，因此需要在统计分析时，考虑复杂协方差结构，由此形成了一系列纵向数据分析的统计分析方法。</p>
 <p>根据资料类型的不同，纵向数据分析方法也各不相同。对定量结局变量，纵向数据分析方法主要包括重复测量方差分析，截断回归模型，中断时间序列分析，线性混合模型等。对定性的结局变量，纵向数据分析方法主要包括广义估算方程以及广义线性混合模型等。</p>
 <p>重复测量方差分析在纵向数据分析中应用较为广泛。此方法可以处理定量结局变量在多个测量时间点之间可能存在的不独立情况。但对数据各个时间点的协方差结构有要求，即我们通常所说的球型性检验，要求协方差结构满足复对称结构。同时，重复测量方差分析不能纳入协变量，只能分析时间效应和处理因素的效应。因此，重复测量方差分析对混杂因素的处理相对较弱。</p>
 <p>截断回归模型，中断时间序列，线性混合模型等处理重复测量数据时，都可以纳入协变量。因此可以很好地测量重复测量数据中的混杂效应。截断回归模型，中断时间序列是同一类模型，多应用于政策干预前后效果的评价，中断时间序列模型考虑了各个时间点之间存在的自回归现象。其基本思想是以干预时间发生前后分为两个不同时间点，分别拟合两条斜率的回归模型，从而通过比较时间点前后斜率的变化来评价政策干预是否达到了预期目的。</p>
 <p>线性混合模型在一般线性回归的基础上引入随机效应，并且协方差结构也可以考虑多种情况，从而更好进行参数估计。线性混合模型最常见的就是方差成分模型，即在截距项上引入随机效应，从而在统计分析时，充分考虑到时间变异的影响。如研究一项药物治疗铅中毒的疗效，研究者分别在治疗后1周，治疗后4周，治疗后6周测量试验组和对照组患者的血铅含量水平。此时，可以利用线性混合模型，在截距项上引入测量时间的随机效应，从而在考虑时间变异的情况下，更好地分析试验效应。</p>
 <p>结局变量为定性数据时，可以考虑使用广义线性混合模型和广义估算方程。根据结局变量的不同，广义线性混合模型主要包括广义logistics模型，广义Poisson模型，广义负二项回归模型。广义估算方程也是处理分类变量结局的数据，但其出发点与广义线性混合模型有所差别。广义线性混合模型即在广义线性模型的基础之上引入随机效应，其出发点仍然在控制时间差异的基础上，分析个体效应的差别。而广义估算方程则更关注群体效应，在允许自由估计观察对象的协方差结构的前提下，通过一定的统计变换和标准误较正方法，即使协方差结构无法准确定义，广义估算方程也可以对群体效应进行较为准确的估算。</p>
 <p>SAS软件对纵向数据分析有完备的支持。中断时间序列可以在proc autreg过程中拟合，广义线性模型可以在proc mixed过程中拟合。广义线性混合模型可以在proc glimmix过程中拟合，广义估算方程可以在proc genmod过程中拟合。</p>
-</div><div class="tags"></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div class="post-nav"><a href="/2016/11/23/baidu/" class="pre">Google 地图批量获取经纬度</a></div><div id="comments"><div id="uyan_frame"></div></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">Inhalte</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/long_stat_1/">组内相关系数（ICC）在重复测量数据中的解释</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/23/baidu/">Google 地图批量获取经纬度</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/newbiostat/">纵向数据分析方法在公共卫生研究中应用</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> Tags</i></div><div class="tagcloud"><a href="/tags/Longitudinal-data-analysis-Intraclass-correlation-coefficent/" style="font-size: 15px;">Longitudinal data analysis Intraclass correlation coefficent</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> Archiv</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> Blogroll</i></div><ul></ul><a href="http://blog.sciencenet.cn/blog.php" title="我的科学网博客" target="_blank">我的科学网博客</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">RSS</a> |  <a href="/about/">Über</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">Jiaqiang Liao.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c18261a49cb0ba80c31ccd600a8eda5d";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://yoursite.com/2016/11/22/newbiostat/" data-id="cj7p0p5wn0003h8qr3ig6409p" class="article-share-link" data-share="baidu" data-title="纵向数据分析方法在公共卫生研究中应用">Share</a>
+      
+
+      
+        <a href="http://yoursite.com/2016/11/22/newbiostat/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/11/23/baidu/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Google 地图批量获取经纬度
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2016/11/22/newbiostat/" data-title="纵向数据分析方法在公共卫生研究中应用" data-url="http://yoursite.com/2016/11/22/newbiostat/"></div>
+  </section>
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Longitudinal-data-analysis-Intraclass-correlation-coefficent/">Longitudinal data analysis Intraclass correlation coefficent</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Longitudinal-data-analysis-Intraclass-correlation-coefficent/" style="font-size: 10px;">Longitudinal data analysis Intraclass correlation coefficent</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/22/long_stat_1/">组内相关系数（ICC）在重复测量数据中的解释</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/23/baidu/">Google 地图批量获取经纬度</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/22/newbiostat/">纵向数据分析方法在公共卫生研究中应用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://arvinxiang.com" target="_blank">主题作者</a>
+          </li>
+        
+          <li>
+            <a href="http://reqianduan.com" target="_blank">热前端</a>
+          </li>
+        
+          <li>
+            <a href="http://yuancheng.work" target="_blank">远程.work</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Jiaqiang Liao<br>
+      Powered by <a href="//hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+  <!-- totop start -->
+<div id="totop">
+<a title="totop"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"reqianduan"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
-</script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script><script src="http://v2.uyan.cc/code/uyan.js?uid=2144813"></script></body></html>
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>
+  function SetShareData(cmd, config) {
+    if (shareDataTitle && shareDataUrl) {
+      config.bdText = shareDataTitle;
+      config.bdUrl = shareDataUrl;
+    }
+    return config;
+  }
+  window._bd_share_config={
+    "common":{onBeforeClick: SetShareData},
+    "share":{"bdCustomStyle":"/css/bdshare.css"}
+  };
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+                    
+}
+  
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                  
+}
+    
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                            all[i].SourceElement().parentNode.className += ' has-jax';
+                                    
+            }
+                
+        });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/script.js"></script>
+
+</div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
