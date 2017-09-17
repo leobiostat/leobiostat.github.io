@@ -371,12 +371,12 @@
 
       
         
-          <h3 id="重复测量数据建模与ICC"><a href="#重复测量数据建模与ICC" class="headerlink" title="重复测量数据建模与ICC"></a>重复测量数据建模与ICC</h3><p>我们以儿童的生长发育为例，对ICC在重复测量数据中的作用进行解释。<br>例如我们重复随访了1500个儿童在分娩时、1岁、2岁的体重，进而分析儿童体重随年龄的变化趋势，则可以建立以下两水平模型：<br>$$y<em>{ij}=\beta</em>{0}+Z_j+\beta<em>1 age+\varepsilon</em>{ij}$$</p>
+          <h3 id="重复测量数据建模与ICC"><a href="#重复测量数据建模与ICC" class="headerlink" title="重复测量数据建模与ICC"></a>重复测量数据建模与ICC</h3><p>我们以儿童的生长发育为例，对ICC在重复测量数据中的作用进行解释。<br>例如我们重复随访了1500个儿童在分娩时、1岁、2岁的体重，进而分析儿童体重随年龄的变化趋势，则可以建立以下两水平模型：<br>$y<em>{ij}=\beta</em>{0}+Z_j+\beta<em>1 age+\varepsilon</em>{ij}$</p>
 <ul>
 <li>水平j：代表1500个儿童，</li>
 <li>水平ij: 代表第j个儿童的第i次测量值<br>其中，$Z_j \sim    N(0,\sigma^2<em>b),\varepsilon</em>{ij}\sim N(0,\sigma^2_e)$分别代表儿童水平和同一儿童不同年龄水平的随机效应。</li>
 </ul>
-<p>此时，同一个儿童在不同年龄阶段体重的相关可以通过层内相关系数进行衡量：<br>$$corr(y<em>{ij},y</em>{ij+1})=\frac{\sigma^2_b}{\sigma^2_b+\sigma^2<em>e}=\rho$$<br>此时，总的方差为:$var(y</em>{ij})=\sigma^2_b+\sigma^2_e$，为常量，不随时间的变化而变化。<br>
+<p>此时，同一个儿童在不同年龄阶段体重的相关可以通过层内相关系数进行衡量：<br>$corr(y<em>{ij},y</em>{ij+1})=\frac{\sigma^2_b}{\sigma^2_b+\sigma^2<em>e}=\rho$<br>此时，总的方差为:$var(y</em>{ij})=\sigma^2_b+\sigma^2_e$，为常量，不随时间的变化而变化。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/05/22/long_stat_1/#more" rel="contents">
               阅读全文 &raquo;
