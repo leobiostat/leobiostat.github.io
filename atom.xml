@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-23T12:23:42.000Z</updated>
+  <updated>2017-09-17T16:20:53.805Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>组内相关系数（ICC）在重复测量数据中的解释</title>
+    <link href="http://yoursite.com/2017/05/22/long_stat_1/"/>
+    <id>http://yoursite.com/2017/05/22/long_stat_1/</id>
+    <published>2017-05-22T15:51:30.000Z</published>
+    <updated>2017-09-17T16:20:53.805Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="重复测量数据建模与ICC"><a href="#重复测量数据建模与ICC" class="headerlink" title="重复测量数据建模与ICC"></a>重复测量数据建模与ICC</h3><p>我们以儿童的生长发育为例，对ICC在重复测量数据中的作用进行解释。<br>例如我们重复随访了1500个儿童在分娩时、1岁、2岁的体重，进而分析儿童体重随年龄的变化趋势，则可以建立以下两水平模型：<br>$$y<em>{ij}=\beta</em>{0}+Z_j+\beta<em>1 age+\varepsilon</em>{ij}$$</p><ul><li>水平j：代表1500个儿童，</li><li>水平ij: 代表第j个儿童的第i次测量值<br>其中，$Z_j \sim    N(0,\sigma^2<em>b),\varepsilon</em>{ij}\sim N(0,\sigma^2_e)$分别代表儿童水平和同一儿童不同年龄水平的随机效应。</li></ul><p>此时，同一个儿童在不同年龄阶段体重的相关可以通过层内相关系数进行衡量：<br>$$corr(y<em>{ij},y</em>{ij+1})=\frac{\sigma^2_b}{\sigma^2_b+\sigma^2<em>e}=\rho$$<br>此时，总的方差为:$var(y</em>{ij})=\sigma^2_b+\sigma^2_e$，为常量，不随时间的变化而变化。</p><h3 id="ICC如何解释"><a href="#ICC如何解释" class="headerlink" title="ICC如何解释"></a>ICC如何解释</h3><h4 id="ICC接近0"><a href="#ICC接近0" class="headerlink" title="ICC接近0"></a>ICC接近0</h4><blockquote><p>在零模型中，ICC代表的不是预测变量之间的关联性，而是反映模型中残差之间的关联性。</p></blockquote><p>ICC非常接近0，此时，$\sigma^2_b$非常小，表示同一儿童不同时间点之间的体重测量数据变异非常大，而不同儿童体重之间的变异则相对较小。</p><h4 id="ICC接近1"><a href="#ICC接近1" class="headerlink" title="ICC接近1"></a>ICC接近1</h4><p>当ICC非常接近1时，$\sigma^2_e$非常小，则表明同一儿童不同时间点之间的体重测量数据变异相对较小，而不同儿童之间的变异则相对较大。</p><h4 id="当ICC非常小时（一般为ICC-lt-0-1），我们是否可以忽视每个儿童不同年龄阶段体重的关联性呢？"><a href="#当ICC非常小时（一般为ICC-lt-0-1），我们是否可以忽视每个儿童不同年龄阶段体重的关联性呢？" class="headerlink" title="当ICC非常小时（一般为ICC&lt;0.1），我们是否可以忽视每个儿童不同年龄阶段体重的关联性呢？"></a>当ICC非常小时（一般为ICC&lt;0.1），我们是否可以忽视每个儿童不同年龄阶段体重的关联性呢？</h4><p>很遗憾，答案是不能。即使是ICC非常小时，我们仍然不能忽视同一儿童不同年龄阶段体重之间的关联性，因为即使这一关联性非常小，我们的统计推断结果仍然会受到影响。目前统计学家们仍然不推荐把ICC作为决定是否处理层次效应的依据。</p><h3 id="层次效应推断的推荐方法之一"><a href="#层次效应推断的推荐方法之一" class="headerlink" title="层次效应推断的推荐方法之一"></a>层次效应推断的推荐方法之一</h3><p>我们可以依据传统的统计模型选择方法对层次效应进行统计推断。通过构建层次模型与一般线性模型之间拟合效果比较的似然比检验（零假设：一般线性模型与层次模型具有同等的拟合效果），<strong>一个较高的似然比卡方值和一个较低的P值预示多水平模型的拟合效果优于一般线性模型的拟合效果</strong>。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;重复测量数据建模与ICC&quot;&gt;&lt;a href=&quot;#重复测量数据建模与ICC&quot; class=&quot;headerlink&quot; title=&quot;重复测量数据建模与ICC&quot;&gt;&lt;/a&gt;重复测量数据建模与ICC&lt;/h3&gt;&lt;p&gt;我们以儿童的生长发育为例，对ICC在重复测量数据中的作用进行
+      
+    
+    </summary>
+    
+    
+      <category term="Longitudinal data analysis Intraclass correlation coefficent" scheme="http://yoursite.com/tags/Longitudinal-data-analysis-Intraclass-correlation-coefficent/"/>
+    
+  </entry>
   
   <entry>
     <title>Google 地图批量获取经纬度</title>
