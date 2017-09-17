@@ -82,16 +82,17 @@
 
 
 
-<meta name="description" content="Jiaqiang Liao">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Biostat-自留地">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta name="description" content="利用google地图API接口，批量获取谷歌地图提供的经纬度数据。原理类似于R软件中ggmap包中的geocod。123456789101112131415161718192021222324252627282930313233geocode_cn&amp;lt;-function(address)&amp;#123;            require(ggmap)			require(rjson)	##批量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google 地图批量获取经纬度">
+<meta property="og:url" content="http://yoursite.com/2016/11/23/baidu/index.html">
 <meta property="og:site_name" content="Biostat-自留地">
-<meta property="og:description" content="Jiaqiang Liao">
+<meta property="og:description" content="利用google地图API接口，批量获取谷歌地图提供的经纬度数据。原理类似于R软件中ggmap包中的geocod。123456789101112131415161718192021222324252627282930313233geocode_cn&amp;lt;-function(address)&amp;#123;            require(ggmap)			require(rjson)	##批量">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-11-23T12:23:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Biostat-自留地">
-<meta name="twitter:description" content="Jiaqiang Liao">
+<meta name="twitter:title" content="Google 地图批量获取经纬度">
+<meta name="twitter:description" content="利用google地图API接口，批量获取谷歌地图提供的经纬度数据。原理类似于R软件中ggmap包中的geocod。123456789101112131415161718192021222324252627282930313233geocode_cn&amp;lt;-function(address)&amp;#123;            require(ggmap)			require(rjson)	##批量">
 
 
 
@@ -109,7 +110,7 @@
   };
 </script>
 
-  <title> 归档 | Biostat-自留地 </title>
+  <title> Google 地图批量获取经纬度 | Biostat-自留地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -140,7 +141,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  page-archive  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -288,73 +289,196 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 6 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Google 地图批量获取经纬度
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-23T17:53:41+08:00" content="2016-11-23">
+              2016-11-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/23/baidu/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/23/baidu/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/23/baidu/" class="leancloud_visitors" data-flag-title="Google 地图批量获取经纬度">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <p>利用google地图API接口，批量获取谷歌地图提供的经纬度数据。原理类似于R软件中ggmap包中的geocod。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">geocode_cn&lt;-function(address)&#123;</div><div class="line">            require(ggmap)</div><div class="line">			require(rjson)</div><div class="line">	##批量转换中文字符</div><div class="line">    for(i in 1:length(address))&#123;</div><div class="line">            location[i]&lt;-paste(paste(&apos;%&apos;,unlist(iconv(address[i],from=&apos;GB2312&apos;,</div><div class="line">            to=&quot;utf-8&quot;,toRaw=T)),sep=&apos;&apos;),collapse=&apos;&apos;)</div><div class="line">			&#125;</div><div class="line">	posturl &lt;-paste(location, sep = &quot;&amp;&quot;)</div><div class="line">	url_string&lt;-paste(&quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot;,</div><div class="line">	             posturl,&quot;&amp;sensor=false&quot;,sep=&quot;&quot;)</div><div class="line"> gc2&lt;-matrix(0,length(address),2)</div><div class="line">  for(i in 1:length(address))&#123;</div><div class="line">    url_string2&lt;-URLencode(url_string[i])</div><div class="line"></div><div class="line">   connect&lt;-url(url_string2)</div><div class="line">   lines&lt;-try(readLines(connect,warn=FALSE),silent=TRUE)</div><div class="line">   close(connect)</div><div class="line"> gc&lt;-fromJSON(paste(lines,collapse=&quot;&quot;))</div><div class="line"></div><div class="line"></div><div class="line">     if(gc$status==&quot;OK&quot;) &#123;</div><div class="line">        lat &lt;-gc$results[[1]]$geometry$location$lat</div><div class="line">        lon &lt;-gc$results[[1]]$geometry$location$lng</div><div class="line">       &#125; else &#123;</div><div class="line">         lat&lt;-NA</div><div class="line">          lon&lt;-NA</div><div class="line">        &#125;</div><div class="line">       res&lt;-cbind(lon,lat)  </div><div class="line">    gc2[i,]&lt;-res[1,]</div><div class="line">  &#125;</div><div class="line">  return(gc2)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+      
+    </div>
+
+    <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/weeb.png" alt="生统小廖 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/22/newbiostat/" rel="next" title="纵向数据分析方法在公共卫生研究中应用">
+                <i class="fa fa-chevron-left"></i> 纵向数据分析方法在公共卫生研究中应用
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/25/sas-mana1/" rel="prev" title="sas_mana1">
+                sas_mana1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/17/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-17T22:13:30+08:00"
-              content="2017-09-17" >
-          09-17
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/11/23/baidu/"
+     data-title="Google 地图批量获取经纬度"
+     data-content=""
+     data-url="http://yoursite.com/2016/11/23/baidu/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
 
-  </section>
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
 
-  
-
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <!-- 多说评论框 start -->  
+        <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
+<!-- 多说评论框 end -->  
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"leobiostat"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
 
         </div>
         
@@ -374,8 +498,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -425,6 +558,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -528,11 +672,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
