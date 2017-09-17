@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Biostat-自留地</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-11-23T12:23:42.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Jiaqiang Liao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google 地图批量获取经纬度</title>
+    <link href="http://yoursite.com/2016/11/23/baidu/"/>
+    <id>http://yoursite.com/2016/11/23/baidu/</id>
+    <published>2016-11-23T09:53:41.000Z</published>
+    <updated>2016-11-23T12:23:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>利用google地图API接口，批量获取谷歌地图提供的经纬度数据。原理类似于R软件中ggmap包中的geocod。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">geocode_cn&lt;-function(address)&#123;</div><div class="line">            require(ggmap)</div><div class="line">require(rjson)</div><div class="line">##批量转换中文字符</div><div class="line">    for(i in 1:length(address))&#123;</div><div class="line">            location[i]&lt;-paste(paste(&apos;%&apos;,unlist(iconv(address[i],from=&apos;GB2312&apos;,</div><div class="line">            to=&quot;utf-8&quot;,toRaw=T)),sep=&apos;&apos;),collapse=&apos;&apos;)</div><div class="line">&#125;</div><div class="line">posturl &lt;-paste(location, sep = &quot;&amp;&quot;)</div><div class="line">url_string&lt;-paste(&quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot;,</div><div class="line">             posturl,&quot;&amp;sensor=false&quot;,sep=&quot;&quot;)</div><div class="line"> gc2&lt;-matrix(0,length(address),2)</div><div class="line">  for(i in 1:length(address))&#123;</div><div class="line">    url_string2&lt;-URLencode(url_string[i])</div><div class="line"></div><div class="line">   connect&lt;-url(url_string2)</div><div class="line">   lines&lt;-try(readLines(connect,warn=FALSE),silent=TRUE)</div><div class="line">   close(connect)</div><div class="line"> gc&lt;-fromJSON(paste(lines,collapse=&quot;&quot;))</div><div class="line"></div><div class="line"></div><div class="line">     if(gc$status==&quot;OK&quot;) &#123;</div><div class="line">        lat &lt;-gc$results[[1]]$geometry$location$lat</div><div class="line">        lon &lt;-gc$results[[1]]$geometry$location$lng</div><div class="line">       &#125; else &#123;</div><div class="line">         lat&lt;-NA</div><div class="line">          lon&lt;-NA</div><div class="line">        &#125;</div><div class="line">       res&lt;-cbind(lon,lat)  </div><div class="line">    gc2[i,]&lt;-res[1,]</div><div class="line">  &#125;</div><div class="line">  return(gc2)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;利用google地图API接口，批量获取谷歌地图提供的经纬度数据。原理类似于R软件中ggmap包中的geocod。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div clas
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>纵向数据分析方法在公共卫生研究中应用</title>
+    <link href="http://yoursite.com/2016/11/22/newbiostat/"/>
+    <id>http://yoursite.com/2016/11/22/newbiostat/</id>
+    <published>2016-11-22T15:51:30.000Z</published>
+    <updated>2016-11-22T16:02:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>纵向数据即我们通常所说的重复测量数据，指观察对象的研究效应不仅包括研究结局，<br>还包括出现结局变量的时间。当研究对象的研究结局在各个测量点之间的研究效应不独立时，<br>协方差结构将会相对复杂，因此需要在统计分析时，考虑复杂协方差结构，由此形成了一系列纵向数据分析的统计分析方法。</p><p>根据资料类型的不同，纵向数据分析方法也各不相同。对定量结局变量，纵向数据分析方法主要包括重复测量方差分析，截断回归模型，中断时间序列分析，线性混合模型等。对定性的结局变量，纵向数据分析方法主要包括广义估算方程以及广义线性混合模型等。</p><p>重复测量方差分析在纵向数据分析中应用较为广泛。此方法可以处理定量结局变量在多个测量时间点之间可能存在的不独立情况。但对数据各个时间点的协方差结构有要求，即我们通常所说的球型性检验，要求协方差结构满足复对称结构。同时，重复测量方差分析不能纳入协变量，只能分析时间效应和处理因素的效应。因此，重复测量方差分析对混杂因素的处理相对较弱。</p><p>截断回归模型，中断时间序列，线性混合模型等处理重复测量数据时，都可以纳入协变量。因此可以很好地测量重复测量数据中的混杂效应。截断回归模型，中断时间序列是同一类模型，多应用于政策干预前后效果的评价，中断时间序列模型考虑了各个时间点之间存在的自回归现象。其基本思想是以干预时间发生前后分为两个不同时间点，分别拟合两条斜率的回归模型，从而通过比较时间点前后斜率的变化来评价政策干预是否达到了预期目的。</p><p>线性混合模型在一般线性回归的基础上引入随机效应，并且协方差结构也可以考虑多种情况，从而更好进行参数估计。线性混合模型最常见的就是方差成分模型，即在截距项上引入随机效应，从而在统计分析时，充分考虑到时间变异的影响。如研究一项药物治疗铅中毒的疗效，研究者分别在治疗后1周，治疗后4周，治疗后6周测量试验组和对照组患者的血铅含量水平。此时，可以利用线性混合模型，在截距项上引入测量时间的随机效应，从而在考虑时间变异的情况下，更好地分析试验效应。</p><p>结局变量为定性数据时，可以考虑使用广义线性混合模型和广义估算方程。根据结局变量的不同，广义线性混合模型主要包括广义logistics模型，广义Poisson模型，广义负二项回归模型。广义估算方程也是处理分类变量结局的数据，但其出发点与广义线性混合模型有所差别。广义线性混合模型即在广义线性模型的基础之上引入随机效应，其出发点仍然在控制时间差异的基础上，分析个体效应的差别。而广义估算方程则更关注群体效应，在允许自由估计观察对象的协方差结构的前提下，通过一定的统计变换和标准误较正方法，即使协方差结构无法准确定义，广义估算方程也可以对群体效应进行较为准确的估算。</p><p>SAS软件对纵向数据分析有完备的支持。中断时间序列可以在proc autreg过程中拟合，广义线性模型可以在proc mixed过程中拟合。广义线性混合模型可以在proc glimmix过程中拟合，广义估算方程可以在proc genmod过程中拟合。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;纵向数据即我们通常所说的重复测量数据，指观察对象的研究效应不仅包括研究结局，&lt;br&gt;还包括出现结局变量的时间。当研究对象的研究结局在各个测量点之间的研究效应不独立时，&lt;br&gt;协方差结构将会相对复杂，因此需要在统计分析时，考虑复杂协方差结构，由此形成了一系列纵向数据分析的统计
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
